@@ -4,6 +4,7 @@ package config
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/spf13/viper"
 )
@@ -36,12 +37,15 @@ func LoadConfig(filePath string) (*Config, error) {
 
 	viper.SetConfigType("yaml") // Config file type (can be JSON, TOML, etc.)
 
-	// Optionally, you can also set environment variables prefix
-	viper.SetEnvPrefix("MYAPP")
+	// Environment variables support (AUTH_DATABASE_HOST, AUTH_APPPORT, etc.)
+	viper.SetEnvPrefix("AUTH")
+	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	viper.AutomaticEnv()
 
 	if err := viper.ReadInConfig(); err != nil {
-		return nil, fmt.Errorf("error reading config file: %v", err)
+		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
+			return nil, fmt.Errorf("error reading config file: %v", err)
+		}
 	}
 
 	config := &Config{}

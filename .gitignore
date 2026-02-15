@@ -1,0 +1,3 @@
+logs
+cmd/config/config.yaml
+cmd/config/config-prod.yaml

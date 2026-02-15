@@ -27,6 +27,9 @@ require (
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jackc/pgpassfile v1.0.0 // indirect
+	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect
+	github.com/jackc/pgx/v5 v5.4.3 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
@@ -52,10 +55,11 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20231120223509-83a465c0220f // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	gorm.io/driver/postgres v1.5.6 // indirect
 )
 
 replace (
-	maqhaa/library/helper => ../library/helper
-	maqhaa/library/logging => ../library/logging
-	maqhaa/library/middleware => ../library/middleware
+	maqhaa/library/helper => github.com/khamdanngazis/maqha-lib/helper v0.0.0-20241115075644-fe9cf3eb77b6
+	maqhaa/library/logging => github.com/khamdanngazis/maqha-lib/logging v0.0.0-20241115075644-fe9cf3eb77b6
+	maqhaa/library/middleware => github.com/khamdanngazis/maqha-lib/middleware v0.0.0-20241115075644-fe9cf3eb77b6
 )

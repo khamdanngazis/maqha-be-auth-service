@@ -52,6 +52,12 @@ func setup() {
 		panic(err)
 	}
 
+	// Apply database migrations for tests
+	_ = db.Migrator().DropTable(&entity.User{}, &entity.Client{})
+	if err := db.AutoMigrate(&entity.Client{}, &entity.User{}); err != nil {
+		panic(err)
+	}
+
 	logFolder := flag.String("log.file", "../../logs", "Logging file")
 
 	flag.Parse()
@@ -126,7 +132,7 @@ func tearDown() {
 func SampleUser(clientID uint) *entity.User {
 	token, _ := helper.GenerateRandomString(16)
 	return &entity.User{
-		ID:           1,
+		ID:           0,
 		ClientID:     clientID,
 		Username:     "sample",
 		Password:     "rahasia",
@@ -157,7 +163,7 @@ func SampleUserCS(clientID uint, username string) *entity.User {
 
 func SampleClient() *entity.Client {
 	return &entity.Client{
-		ID:          1,
+		ID:          0,
 		CompanyName: "Example Coffee",
 		Email:       "info@examplecoffee.com",
 		PhoneNumber: "+1234567890",

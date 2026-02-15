@@ -9,6 +9,7 @@ import (
 	"net/http/httptest"
 	"strconv"
 	"testing"
+	"time"
 
 	"maqhaa/auth_service/internal/app/entity"
 	"maqhaa/auth_service/internal/app/model"
@@ -136,6 +137,78 @@ func TestLoginHandler_NotExisUser(t *testing.T) {
 	assert.Equal(t, service.InvalidUsernameMessage, response.Message)
 	assert.Equal(t, service.InvalidUsername, response.Code)
 	assert.Nil(t, response.Data) // Data should be nil for failed login attempts
+}
+
+func TestLoginHandler_InvalidPassword(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	db.Create(userLogin)
+
+	// Create a login request with wrong password
+	loginRequest := model.LoginRequest{
+		Username: userLogin.Username,
+		Password: "wrong-password",
+	}
+
+	loginRequestJSON, err := json.Marshal(loginRequest)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	req, err := http.NewRequest("POST", "/login", bytes.NewBuffer(loginRequestJSON))
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+
+	http.HandlerFunc(authHandler.LoginHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusUnauthorized, rr.Code)
+
+	var response model.LoginResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidPasswordMessage, response.Message)
+	assert.Equal(t, service.InvalidPassword, response.Code)
+}
+
+func TestLoginHandler_InvalidFormat(t *testing.T) {
+	req, err := http.NewRequest("POST", "/login", bytes.NewBuffer([]byte("{invalid-json")))
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+
+	http.HandlerFunc(authHandler.LoginHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.LoginResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidFormatErrorMessage, response.Message)
+	assert.Equal(t, service.InvalidFormatError, response.Code)
 }
 
 func TestAddUserHandler_Positive(t *testing.T) {
@@ -506,6 +579,139 @@ func TestAddUserHandler_InvalidToken(t *testing.T) {
 	assert.Equal(t, service.InvalidToken, response.Code)
 }
 
+func TestAddUserHandler_InvalidFormat(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	db.Create(userLogin)
+
+	req, err := http.NewRequest("POST", "/user", bytes.NewBuffer([]byte("{invalid-json")))
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.Header.Set("Token", userLogin.Token)
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	http.HandlerFunc(authHandler.AddUserHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidFormatErrorMessage, response.Message)
+	assert.Equal(t, service.InvalidFormatError, response.Code)
+}
+
+func TestAddUserHandler_InvalidRequest(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	db.Create(userLogin)
+
+	addUserRequest := model.AddUserRequest{
+		Username: "",
+		Password: "Password",
+		FullName: "New User",
+		Role:     2,
+	}
+
+	requestJSON, err := json.Marshal(addUserRequest)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	req, err := http.NewRequest("POST", "/user", bytes.NewBuffer(requestJSON))
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.Header.Set("Token", userLogin.Token)
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	http.HandlerFunc(authHandler.AddUserHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidRequestError, response.Code)
+	assert.Contains(t, response.Message, "Invalid Request")
+}
+
+func TestAddUserHandler_TokenExpired(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	userLogin.TokenExpired = time.Now().Add(-time.Minute)
+	db.Create(userLogin)
+
+	addUserRequest := model.AddUserRequest{
+		Username: "New User",
+		Password: "Password",
+		FullName: "New User",
+		Role:     2,
+	}
+
+	requestJSON, err := json.Marshal(addUserRequest)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	req, err := http.NewRequest("POST", "/user", bytes.NewBuffer(requestJSON))
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.Header.Set("Token", userLogin.Token)
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	http.HandlerFunc(authHandler.AddUserHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidTokendMessage, response.Message)
+	assert.Equal(t, service.InvalidToken, response.Code)
+}
+
 func TestEditUserHandler_Positive(t *testing.T) {
 	// create mock data
 	tables := []string{"user", "client"}
@@ -537,7 +743,7 @@ func TestEditUserHandler_Positive(t *testing.T) {
 	}
 
 	EditUserRequest := model.EditUserRequest{
-		ID:             userLogin.ID,
+		ID:             user.ID,
 		AddUserRequest: UserRequest,
 	}
 
@@ -627,7 +833,7 @@ func TestEditUserHandler_InvalidToken(t *testing.T) {
 	}
 
 	EditUserRequest := model.EditUserRequest{
-		ID:             userLogin.ID,
+		ID:             user.ID,
 		AddUserRequest: UserRequest,
 	}
 
@@ -707,7 +913,7 @@ func TestEditUserHandler_InvalidRequest(t *testing.T) {
 	}
 
 	EditUserRequest := model.EditUserRequest{
-		ID:             userLogin.ID,
+		ID:             user.ID,
 		AddUserRequest: UserRequest,
 	}
 
@@ -753,6 +959,170 @@ func TestEditUserHandler_InvalidRequest(t *testing.T) {
 	// Perform assertions based on the expected login response
 	assert.Equal(t, service.InvalidRequestError, response.Code)
 
+}
+
+func TestEditUserHandler_InvalidFormat(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	db.Create(userLogin)
+
+	req, err := http.NewRequest("PUT", "/user", bytes.NewBuffer([]byte("{invalid-json")))
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.Header.Set("Token", userLogin.Token)
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	http.HandlerFunc(authHandler.EditUserHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidFormatErrorMessage, response.Message)
+	assert.Equal(t, service.InvalidFormatError, response.Code)
+}
+
+func TestEditUserHandler_UserNotAllowed(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	userLogin.Role = 2
+	db.Create(userLogin)
+
+	user := SampleUser(client.ID)
+	hashedPassword, _ = helper.HashPassword(user.Password)
+	user.Password = hashedPassword
+	db.Create(user)
+
+	user.FullName = "New Edit User"
+	user.Username = "New.Edit.User"
+	user.Password = "rahasiaBanget"
+	user.Role = 2
+
+	userRequest := model.AddUserRequest{
+		FullName: user.FullName,
+		Username: user.Username,
+		Password: user.Password,
+		Role:     user.Role,
+	}
+
+	editUserRequest := model.EditUserRequest{
+		ID:             user.ID,
+		AddUserRequest: userRequest,
+	}
+
+	requestJSON, err := json.Marshal(editUserRequest)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	req, err := http.NewRequest("PUT", "/user", bytes.NewBuffer(requestJSON))
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.Header.Set("Token", userLogin.Token)
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	http.HandlerFunc(authHandler.EditUserHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.UserNotAllowMessage, response.Message)
+	assert.Equal(t, service.UserNotAllowError, response.Code)
+}
+
+func TestEditUserHandler_UserNotActive(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	userLogin.IsActive = false
+	db.Create(userLogin)
+
+	user := SampleUser(client.ID)
+	hashedPassword, _ = helper.HashPassword(user.Password)
+	user.Password = hashedPassword
+	db.Create(user)
+
+	user.FullName = "New Edit User"
+	user.Username = "New.Edit.User"
+	user.Password = "rahasiaBanget"
+	user.Role = 2
+
+	userRequest := model.AddUserRequest{
+		FullName: user.FullName,
+		Username: user.Username,
+		Password: user.Password,
+		Role:     user.Role,
+	}
+
+	editUserRequest := model.EditUserRequest{
+		ID:             user.ID,
+		AddUserRequest: userRequest,
+	}
+
+	requestJSON, err := json.Marshal(editUserRequest)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	req, err := http.NewRequest("PUT", "/user", bytes.NewBuffer(requestJSON))
+	if err != nil {
+		t.Fatal(err)
+	}
+	req.Header.Set("Token", userLogin.Token)
+	requestID := uuid.New().String()
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	http.HandlerFunc(authHandler.EditUserHandler).ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.UserNotActiveMessage, response.Message)
+	assert.Equal(t, service.UserNotActiveError, response.Code)
 }
 
 func TestDeactivateUserHandler_Positive(t *testing.T) {
@@ -820,6 +1190,46 @@ func TestDeactivateUserHandler_Positive(t *testing.T) {
 	assert.Equal(t, userNew.IsActive, false)
 }
 
+func TestDeactivateUserHandler_InvalidUserID(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	db.Create(userLogin)
+
+	router := mux.NewRouter()
+	router.HandleFunc("/user/{userID}", authHandler.DeactivateUserHandler).Methods("DELETE")
+
+	req, err := http.NewRequest("DELETE", "/user/0", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	req.Header.Set("Token", userLogin.Token)
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	router.ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidRequestError, response.Code)
+	assert.Contains(t, response.Message, "Invalid Request")
+}
+
 func TestLogoutHandler_Positive(t *testing.T) {
 	// create mock data
 	tables := []string{"user", "client"}
@@ -876,6 +1286,41 @@ func TestLogoutHandler_Positive(t *testing.T) {
 	}
 
 	assert.NotEqual(t, userLogin.Token, userNew.Token)
+}
+
+func TestLogoutHandler_InvalidToken(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+
+	router := mux.NewRouter()
+	router.HandleFunc("/logout", authHandler.LogoutHandler).Methods("DELETE")
+
+	req, err := http.NewRequest("DELETE", "/logout", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	req.Header.Set("Token", "")
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	router.ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidTokendMessage, response.Message)
+	assert.Equal(t, service.InvalidToken, response.Code)
 }
 
 func TestGetAllUserHandler_Positive(t *testing.T) {
@@ -940,6 +1385,128 @@ func TestGetAllUserHandler_Positive(t *testing.T) {
 	assert.Equal(t, service.SuccessError, response.Code)
 
 	assert.Equal(t, len(*response.Data), 6)
+}
+
+func TestGetAllUserHandler_InvalidToken(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	db.Create(userLogin)
+
+	router := mux.NewRouter()
+	router.HandleFunc("/user", authHandler.GetAllUserHandler).Methods("GET")
+
+	req, err := http.NewRequest("GET", "/user", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	req.Header.Set("Token", "")
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	router.ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidTokendMessage, response.Message)
+	assert.Equal(t, service.InvalidToken, response.Code)
+}
+
+func TestGetAllUserHandler_UserNotAllowed(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	userLogin.Role = 2
+	db.Create(userLogin)
+
+	router := mux.NewRouter()
+	router.HandleFunc("/user", authHandler.GetAllUserHandler).Methods("GET")
+
+	req, err := http.NewRequest("GET", "/user", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	req.Header.Set("Token", userLogin.Token)
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	router.ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.UserNotAllowMessage, response.Message)
+	assert.Equal(t, service.UserNotAllowError, response.Code)
+}
+
+func TestGetAllUserHandler_TokenExpired(t *testing.T) {
+	// create mock data
+	tables := []string{"user", "client"}
+	defer clearDB(tables)
+
+	client := SampleClient()
+	db.Create(client)
+
+	userLogin := SampleUser(client.ID)
+	hashedPassword, _ := helper.HashPassword(userLogin.Password)
+	userLogin.Password = hashedPassword
+	userLogin.TokenExpired = time.Now().Add(-time.Minute)
+	db.Create(userLogin)
+
+	router := mux.NewRouter()
+	router.HandleFunc("/user", authHandler.GetAllUserHandler).Methods("GET")
+
+	req, err := http.NewRequest("GET", "/user", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	requestID := uuid.New().String()
+	req.Header.Set("Token", userLogin.Token)
+	ctx := context.WithValue(req.Context(), middleware.RequestIDKey, requestID)
+	req = req.WithContext(ctx)
+
+	rr := httptest.NewRecorder()
+	router.ServeHTTP(rr, req)
+
+	assert.Equal(t, http.StatusBadRequest, rr.Code)
+
+	var response model.HTTPResponse
+	err = json.Unmarshal(rr.Body.Bytes(), &response)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	assert.Equal(t, service.InvalidTokendMessage, response.Message)
+	assert.Equal(t, service.InvalidToken, response.Code)
 }
 
 func TestGetUserGRPCHandler_Positive(t *testing.T) {

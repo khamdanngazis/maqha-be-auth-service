@@ -69,7 +69,7 @@ func main() {
 	httpRouter.GET("/user", authHandler.GetAllUserHandler)
 	httpRouter.POST("/user", authHandler.AddUserHandler)
 	httpRouter.PUT("/user", authHandler.EditUserHandler)
-	httpRouter.DELETE("/user", authHandler.DeactivateUserHandler)
+	httpRouter.DELETE("/user/{userID}", authHandler.DeactivateUserHandler)
 	httpRouter.DELETE("/logout", authHandler.LogoutHandler)
 
 	go func() {

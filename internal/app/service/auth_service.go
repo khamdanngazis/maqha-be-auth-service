@@ -141,6 +141,15 @@ func (a *authServiceImpl) AddUser(ctx context.Context, request model.AddUserRequ
 		return *NewInvalidRequestError(err.Error())
 	}
 
+	// Check for duplicate username
+	existingUser, err := a.userRepository.GetUserByUsername(ctx, request.Username)
+	if err != nil && err.Error() != "record not found" {
+		return *NewQueryDBError()
+	}
+	if existingUser != nil {
+		return *NewDuplicateUserError()
+	}
+
 	hashedPassword, err := helper.HashPassword(request.Password)
 	if err != nil {
 		logging.Log.WithFields(logrus.Fields{"request_id": logID}).Errorf("Error HashPassword  %s", err.Error())
@@ -156,7 +165,9 @@ func (a *authServiceImpl) AddUser(ctx context.Context, request model.AddUserRequ
 
 	err = a.userRepository.CreateUser(ctx, newUser)
 	if err != nil {
-		if strings.Contains(err.Error(), "Duplicate entry") {
+		if strings.Contains(err.Error(), "Duplicate entry") ||
+			strings.Contains(err.Error(), "duplicate key value violates unique constraint") ||
+			strings.Contains(err.Error(), "SQLSTATE 23505") {
 			return *NewDuplicateUserError()
 		}
 		return *NewUpdateQueryDBError()

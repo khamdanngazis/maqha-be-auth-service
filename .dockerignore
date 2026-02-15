@@ -1,0 +1,10 @@
+.git
+.gitignore
+.vscode
+logs
+bin
+*.log
+**/*_test.go
+**/tests/**
+**/doc/**
+**/docs/**

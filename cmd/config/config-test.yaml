@@ -2,10 +2,14 @@
 
 database:
   host: "localhost"
-  port: 3306
-  user: "root"
-  password: ""
-  dbname: "maqhaa_pos_test"
+  port: 5432
+  user: "admin"
+  password: "password123"
+  dbname: "appdb_test"
   debug: true
-appport: :8010
-grpcport: :50051
+externalconnection:
+  authservice:
+    host: localhost:50051
+appport: :8011
+grpcport: :50052
+imagepath: "../../public/images"
