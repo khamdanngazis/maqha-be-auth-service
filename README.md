@@ -91,6 +91,9 @@ Jika tidak memakai file config, bisa pakai env dengan prefix `AUTH_`:
 - `AUTH_GRPCPORT`
 - `AUTH_LOG_TO_STDOUT` (set `true` untuk log ke stdout)
 
+### Railway Port
+Railway menyediakan env `PORT`. Aplikasi akan otomatis memakai `PORT` untuk HTTP listener.
+
 ## Kode Error
 - 0: Success
 - 101: User not found
