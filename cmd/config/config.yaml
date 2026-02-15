@@ -1,0 +1,11 @@
+# config.yaml
+
+database:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: ""
+  dbname: "maqhaa_pos"
+  debug: true
+appport: :8010
+grpcport: :50051

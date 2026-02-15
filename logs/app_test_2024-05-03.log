@@ -1,0 +1,43 @@
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"CjVaoOGmF6p1Ot6k\"}}\n" RequestID=5b4005ec-e712-4a72-ae17-e11dd1af7730 Status=200
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body= RequestID=427feaa6-799a-4c57-a40e-acaee4ae38d5 Status=200
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=817af42c-4e23-460b-8977-144663e43723 Status=200
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=dc0cbd45-ae22-4615-8040-6e587eca4e1e Status=400
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=3cc1093a-51ec-481a-a157-fa0d2093b8e4 Status=400
+time="2024-05-03T09:55:12+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=1cf5927e-4b28-4f5c-be3c-5eab117fff72
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=1cf5927e-4b28-4f5c-be3c-5eab117fff72 Status=400
+time="2024-05-03T09:55:12+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=a85c71ea-eea2-4c0c-95b7-f36b7f614d80 Status=401
+time="2024-05-03T09:55:13+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=7b66f262-12ee-495c-92b8-5dc17b372573 Status=400
+time="2024-05-03T09:55:13+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=73c8474e-7095-4b37-a5d7-b788f891ea95
+time="2024-05-03T09:55:13+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=73c8474e-7095-4b37-a5d7-b788f891ea95 Status=200
+time="2024-05-03T09:55:13+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=204f1399-ef19-4122-a1ce-9dbb7ec9d11f
+time="2024-05-03T09:55:13+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=204f1399-ef19-4122-a1ce-9dbb7ec9d11f Status=400
+time="2024-05-03T09:55:13+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"\",\"role\":2}" RequestID=da60bcc3-5a2d-481b-903f-7d217d400f8f
+time="2024-05-03T09:55:13+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Key: 'EditUserRequest.AddUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag\"}\n" RequestID=da60bcc3-5a2d-481b-903f-7d217d400f8f Status=400
+time="2024-05-03T09:55:13+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=fa85c991-8715-42cb-aec7-41122e701598 Status=400
+time="2024-05-03T09:57:59+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"iky4rzYGgRrspkzx\"}}\n" RequestID=7cb86921-551a-41b1-8d6e-0e94b3e147c8 Status=200
+time="2024-05-03T09:58:09+07:00" level=info msg="Outgoing response" Body= RequestID=80fe1eef-d359-46c1-8ea7-df4439695c75 Status=200
+time="2024-05-03T09:58:21+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=44327ce8-4590-49a1-b888-9dce9770987a Status=200
+time="2024-05-03T09:58:30+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=6722f484-efa6-4e3b-bc25-ef8e6c25e897 Status=400
+time="2024-05-03T09:58:40+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=1f3583ea-b5fe-427a-b8b3-b7f816841d40 Status=400
+time="2024-05-03T09:58:51+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=53b96f49-f8f5-48cf-b3c8-f8bed2e00e60
+time="2024-05-03T09:58:51+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=53b96f49-f8f5-48cf-b3c8-f8bed2e00e60 Status=400
+time="2024-05-03T09:59:01+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=725bd9e9-0095-428d-8aab-1177ec69c242 Status=401
+time="2024-05-03T09:59:12+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=c50e40bf-5b5e-4b08-8b69-eca56de4c48c Status=400
+time="2024-05-03T09:59:22+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=72c34423-029b-4fa2-a2d3-637e2921acd5
+time="2024-05-03T09:59:22+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=72c34423-029b-4fa2-a2d3-637e2921acd5 Status=200
+time="2024-05-03T09:59:37+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=d8a58158-1207-449e-90ec-b0b623074377 Status=400
+time="2024-05-03T10:08:08+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=194328db-5047-4fd4-85aa-5feeb99d7f61 Status=400
+time="2024-05-03T10:11:11+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=aff4a890-cfab-4dc8-9f25-db66c11738fb Status=400
+time="2024-05-03T10:13:31+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=c165c1cd-df7f-44ef-9b88-02472f1c7e5d Status=400
+time="2024-05-03T10:14:15+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=76d6d11c-fcad-4052-a7a4-29d7d75a1638 Status=400
+time="2024-05-03T10:15:38+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=cf1856f3-243c-4897-85da-8aa46bfdbf0f Status=400
+time="2024-05-03T10:29:20+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=c9c5ff24-4be5-4342-a663-dbe452efe0a6 Status=200
+time="2024-05-03T11:19:56+07:00" level=info msg="Outgoing response" Body="404 page not found\n" RequestID=22f174da-ab7e-4a29-bb1b-93002aa6cacf Status=404
+time="2024-05-03T11:20:24+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=bb8f840c-10e7-4a5f-98b4-de58408e69e9 Status=200
+time="2024-05-03T11:21:07+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=bdb677f8-7294-409a-9dd5-217daa77d828 Status=200
+time="2024-05-03T11:25:32+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=b8caca8e-ae3b-4180-baf2-41a7c9bde9f1 Status=200
+time="2024-05-03T11:26:19+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=ae3230fe-8979-45f5-9d4c-a97077505ce8 Status=200
+time="2024-05-03T14:36:53+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=716970b6-c91d-4db4-a874-d6827b0a5443 Status=200
+time="2024-05-03T14:38:50+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=50390408-eea4-4c83-a495-ca4938cab896 Status=200
+time="2024-05-03T14:45:42+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=97b2f303-fa2e-4010-8950-bf54ae38faa8 Status=200
+time="2024-05-03T14:49:59+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=53c8bd47-20e4-4465-a4fe-1f3b7d366da7 Status=200

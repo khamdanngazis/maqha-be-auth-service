@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package model;
+option go_package = "./../model";
+
+service User {
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+}
+
+message GetUserRequest {
+  string token = 1;
+}
+
+message UserData {
+  uint32 id = 1;
+  uint32 client_id = 2;
+  bool  is_admin = 3;
+  bool  is_login = 4;
+}
+
+message GetUserResponse {
+  int32 code = 1;
+  string message = 2;
+  UserData data = 3;
+}

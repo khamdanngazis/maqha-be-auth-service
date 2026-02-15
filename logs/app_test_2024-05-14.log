@@ -1,0 +1,11 @@
+time="2024-05-14T10:47:33+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=2f5c5b75-8cdf-48fc-be22-e5eab4a118be Status=200
+time="2024-05-14T10:54:09+07:00" level=info msg="Updating user" request_id=eedad27f-aadc-414b-838f-1b27c1340e14 user="&{1 0    0  0001-01-01 00:00:00 +0000 UTC false 0001-01-01 00:00:00 +0000 UTC}"
+time="2024-05-14T10:54:09+07:00" level=error msg="Error UpdateUser Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`maqhaa_pos_test`.`user`, CONSTRAINT `fk_users_client_id` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`))" request_id=eedad27f-aadc-414b-838f-1b27c1340e14
+time="2024-05-14T10:54:09+07:00" level=info msg="Outgoing response" Body="{\"code\":302,\"message\":\"Error Update database\"}\n" RequestID=eedad27f-aadc-414b-838f-1b27c1340e14 Status=503
+time="2024-05-14T10:59:36+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=004963c9-39ba-4631-85e3-acd159dc4029 Status=200
+time="2024-05-14T11:01:15+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=ae6897d9-d531-4686-87e7-ecd5aed2aed1 Status=200
+time="2024-05-14T11:02:22+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=37896da6-a025-4bbd-89fa-a1ac73c65079 Status=200
+time="2024-05-14T11:03:56+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=b1bbd9ee-1df3-49da-a52c-5490be841d32 Status=200
+time="2024-05-14T11:05:14+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=501f9d61-eaa3-46c4-9e8d-2d1fba38aef7 Status=200
+time="2024-05-14T11:07:19+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=853462c8-bd2d-486f-8e6e-9abaa9556e10 Status=200
+time="2024-05-14T11:11:24+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=4f5dc097-3ad6-43d8-8347-1ac5f1d61978 Status=200

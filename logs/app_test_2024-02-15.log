@@ -1,0 +1,142 @@
+time="2024-02-15T11:08:26+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"Q6QzDSCyxF6s9mt8\"}}\n" RequestID=673861d8-c6a4-473f-9496-f91572170710 Status=200
+time="2024-02-15T11:08:26+07:00" level=info msg="Outgoing response" Body= RequestID=4f4ccb33-ef76-4d64-b803-f83b7792a4af Status=200
+time="2024-02-15T11:08:26+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=e82e7b07-3596-4c9a-93f1-45d84e1bfb8f Status=200
+time="2024-02-15T11:08:26+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=11469958-66ef-4431-8e18-5636220e68b9 Status=400
+time="2024-02-15T11:08:26+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=c7b8d406-0f0d-4b2b-a047-4bd0f9c1d8cc Status=400
+time="2024-02-15T11:08:27+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=eb455688-f624-45cf-a814-5e51128474a1
+time="2024-02-15T11:08:27+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=eb455688-f624-45cf-a814-5e51128474a1 Status=400
+time="2024-02-15T11:08:27+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=32ab7ab8-849e-48bf-877d-df3c4f33c314 Status=401
+time="2024-02-15T11:08:27+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=9b4d3451-9be0-4933-91c6-9862f75968d1 Status=400
+time="2024-02-15T11:08:27+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"New Edit User\",\"fullName\":\"\",\"role\":2}" RequestID=463817a5-81bc-41b4-9132-ff7d944aac8f
+time="2024-02-15T11:08:27+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Key: 'EditUserRequest.AddUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag\"}\n" RequestID=463817a5-81bc-41b4-9132-ff7d944aac8f Status=400
+time="2024-02-15T11:10:52+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"5VxVJhFyHJMbR3i3\"}}\n" RequestID=218c1a4d-3fea-498d-8899-07e4db9fb6e4 Status=200
+time="2024-02-15T11:10:52+07:00" level=info msg="Outgoing response" Body= RequestID=8fbbba92-ded1-466f-a928-7ad9bd519017 Status=200
+time="2024-02-15T11:10:52+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=b1b60c8c-2223-4d1c-8ebe-5624fd10b026 Status=200
+time="2024-02-15T11:10:52+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=062009d3-7a42-4329-9a3b-bac08060a0d6 Status=400
+time="2024-02-15T11:10:52+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=f2f474b5-c1a9-4f3c-be53-55b5a2418c40 Status=400
+time="2024-02-15T11:10:52+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=baf6b5c0-9af7-4a40-9211-c9d530055e7d
+time="2024-02-15T11:10:52+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=baf6b5c0-9af7-4a40-9211-c9d530055e7d Status=400
+time="2024-02-15T11:10:53+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=d89d96a3-bf2f-45d7-93de-ec22b4069e62 Status=401
+time="2024-02-15T11:10:53+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=2521e50c-1564-429e-b93d-7fd1456af8dd Status=400
+time="2024-02-15T11:10:53+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"New Edit User\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=d67ff3ac-4491-4b34-ad1b-49b3a2d70491
+time="2024-02-15T11:10:53+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=d67ff3ac-4491-4b34-ad1b-49b3a2d70491 Status=200
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"rzFJg0EbwuCfWkVZ\"}}\n" RequestID=f77d146c-d653-4369-ba98-c68a3db13774 Status=200
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body= RequestID=e6ecd101-4134-4fc6-bda6-dd9a4321955c Status=200
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=1ff12a3b-89ce-4e80-9b70-be4b8020309d Status=200
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=86c8443b-5843-46a2-ac49-71aa3dd2e2b0 Status=400
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=a837896c-fe83-439a-8a36-e7c8c6ed3425 Status=400
+time="2024-02-15T11:14:52+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=bbca134d-3c0b-4fe4-bbde-a186eb809cb4
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=bbca134d-3c0b-4fe4-bbde-a186eb809cb4 Status=400
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=e5ebd426-bcd8-44ca-90c3-7071d1a422cb Status=401
+time="2024-02-15T11:14:52+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=0d500806-90aa-474e-a256-96e44881a153 Status=400
+time="2024-02-15T11:14:53+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"New Edit User\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=75613aca-5ca8-428d-a21f-b310f541a1d9
+time="2024-02-15T11:14:53+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=75613aca-5ca8-428d-a21f-b310f541a1d9 Status=200
+time="2024-02-15T11:16:25+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"Ds0SoFqTsLr2UL3i\"}}\n" RequestID=a0dfafc9-e42c-4565-8469-3e225b02a8d7 Status=200
+time="2024-02-15T11:16:25+07:00" level=info msg="Outgoing response" Body= RequestID=31edce42-9b1b-4625-8088-8559eb1b7e13 Status=200
+time="2024-02-15T11:16:25+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=bb6340b8-ee09-4be8-a0d3-19771c8b7347 Status=200
+time="2024-02-15T11:16:26+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=cd438d1b-f591-4825-ac78-94981657a5b9 Status=400
+time="2024-02-15T11:16:26+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=85f76185-d98c-480f-b80f-f4bfd8eb09f2 Status=400
+time="2024-02-15T11:16:26+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=f4c739d6-fca3-42e5-ac4c-d243c734abe6
+time="2024-02-15T11:16:26+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=f4c739d6-fca3-42e5-ac4c-d243c734abe6 Status=400
+time="2024-02-15T11:16:26+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=9820abcf-bfc9-417f-ba97-199a19733213 Status=401
+time="2024-02-15T11:16:26+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=184e0536-ff08-4bfa-9eb8-f8e7673a3b1a Status=400
+time="2024-02-15T11:16:26+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"New Edit User\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=cdc194af-0b7a-4368-a6ef-a8b8c5d51136
+time="2024-02-15T11:16:26+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=cdc194af-0b7a-4368-a6ef-a8b8c5d51136 Status=200
+time="2024-02-15T11:17:23+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"q34LmEXgO14rojOM\"}}\n" RequestID=c50f49a0-e053-418d-8965-06f89a58bc61 Status=200
+time="2024-02-15T11:17:23+07:00" level=info msg="Outgoing response" Body= RequestID=6c6e09db-1727-4610-8abd-618a7b79c171 Status=200
+time="2024-02-15T11:17:23+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=55e27279-3a85-4d0e-9c12-53d5ac917d86 Status=200
+time="2024-02-15T11:17:24+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=35a1b9f0-a5f3-44b0-aa04-280c51f895b4 Status=400
+time="2024-02-15T11:17:24+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=3a6ae7ea-5553-49d8-963d-0f8a46a13641 Status=400
+time="2024-02-15T11:17:24+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=148f34f2-2611-4c1a-8662-52106a779344
+time="2024-02-15T11:17:24+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=148f34f2-2611-4c1a-8662-52106a779344 Status=400
+time="2024-02-15T11:17:24+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=1567596e-4768-42d9-a0cc-7b46cddab87d Status=401
+time="2024-02-15T11:17:24+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=1d75b074-ce57-49be-be7e-121e8ac8bc5c Status=400
+time="2024-02-15T11:17:24+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"New Edit User\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=a29bb509-989c-4061-9b8d-dc0bb5a56f1a
+time="2024-02-15T11:17:24+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=a29bb509-989c-4061-9b8d-dc0bb5a56f1a Status=200
+time="2024-02-15T11:18:08+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"Y5V0rphX68vttBll\"}}\n" RequestID=e16f465a-e199-4039-98fd-910b4922f011 Status=200
+time="2024-02-15T11:18:08+07:00" level=info msg="Outgoing response" Body= RequestID=ab498097-1c94-4963-811c-d8ecb89a67c0 Status=200
+time="2024-02-15T11:18:08+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=09b0d2bf-d1fd-437c-be73-7a12b4a902ce Status=200
+time="2024-02-15T11:18:09+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=a6e0c568-d735-4fab-8dac-19719785531e Status=400
+time="2024-02-15T11:18:09+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=24d3b4cf-6d8e-454c-a4ff-230dca188df5 Status=400
+time="2024-02-15T11:18:09+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=d5fd0c79-1ca4-40f1-91fe-4c4113d609d4
+time="2024-02-15T11:18:09+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=d5fd0c79-1ca4-40f1-91fe-4c4113d609d4 Status=400
+time="2024-02-15T11:18:09+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=1f0f8b1f-8f72-496d-abb9-33d17ff25370 Status=401
+time="2024-02-15T11:18:09+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=c2f0cf67-c763-4bba-b782-1de4d5180acb Status=400
+time="2024-02-15T11:18:09+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=90cae98b-b01f-4dcb-b993-e702931d33be
+time="2024-02-15T11:18:09+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=90cae98b-b01f-4dcb-b993-e702931d33be Status=200
+time="2024-02-15T14:43:01+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"nvrfDqUakC2AjLop\"}}\n" RequestID=4740f6e8-a393-4a37-8c1c-ce79c11c98ab Status=200
+time="2024-02-15T14:43:01+07:00" level=info msg="Outgoing response" Body= RequestID=54bf51b8-a7a8-4950-94a4-ef63194136a3 Status=200
+time="2024-02-15T14:43:01+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=3e8768d4-4b7d-459c-a8d1-d95f40487a7c Status=200
+time="2024-02-15T14:43:01+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=006fb0e9-50dc-4ef1-aae6-9caa280ed11c Status=400
+time="2024-02-15T14:43:01+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=9843de26-cfd2-4513-a94a-a141a922ce23 Status=400
+time="2024-02-15T14:43:02+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=1123cb98-a92d-4591-956e-137e674ee934
+time="2024-02-15T14:43:02+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=1123cb98-a92d-4591-956e-137e674ee934 Status=400
+time="2024-02-15T14:43:02+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=bd007c8f-fae2-4b8a-96ba-34c7ab732c76 Status=401
+time="2024-02-15T14:43:02+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=3e397372-0f30-4006-90bf-35400417cb83 Status=400
+time="2024-02-15T14:43:02+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=463ffc3b-bfde-4cc4-9827-2374fe56046b
+time="2024-02-15T14:43:02+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=463ffc3b-bfde-4cc4-9827-2374fe56046b Status=200
+time="2024-02-15T14:43:02+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=03f0fa33-961f-409e-a1e9-05c8f3d95a08
+time="2024-02-15T14:43:02+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=03f0fa33-961f-409e-a1e9-05c8f3d95a08 Status=400
+time="2024-02-15T14:43:02+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"\",\"role\":2}" RequestID=309c44a2-5344-4b27-808d-958fd503fc07
+time="2024-02-15T14:43:02+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=309c44a2-5344-4b27-808d-958fd503fc07 Status=400
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"XaEOn7YKPdCRQTAN\"}}\n" RequestID=b189ed4f-7af1-4da6-9b23-1c572ffc4a40 Status=200
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body= RequestID=1658e2b1-a5f8-475d-a827-2240c30e0252 Status=200
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=0c03b9ba-77a0-4de6-9d3b-018785d7c8f1 Status=200
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=d5d5b07a-c0d4-4515-91a5-008ccb1869ff Status=400
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=e19a5e7e-7bf3-4ca5-98fc-3c71ff6f1bfa Status=400
+time="2024-02-15T14:43:40+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=1ab3fdb4-76f6-4307-a7ae-f22c0fe9fc46
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=1ab3fdb4-76f6-4307-a7ae-f22c0fe9fc46 Status=400
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=8c4b84cc-3b57-434b-8212-edd548971c2c Status=401
+time="2024-02-15T14:43:40+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=79c635a1-a40e-4552-89a6-fb23116d9be8 Status=400
+time="2024-02-15T14:43:41+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=b609b72e-7e25-40af-bd27-ff05c8513d00
+time="2024-02-15T14:43:41+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=b609b72e-7e25-40af-bd27-ff05c8513d00 Status=200
+time="2024-02-15T14:43:41+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=4b94fcfe-8840-46c2-a718-d70669c804f5
+time="2024-02-15T14:43:41+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=4b94fcfe-8840-46c2-a718-d70669c804f5 Status=400
+time="2024-02-15T14:43:41+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"\",\"role\":2}" RequestID=a924f929-3e89-4d30-8951-6bd7eecdaeb9
+time="2024-02-15T14:43:41+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=a924f929-3e89-4d30-8951-6bd7eecdaeb9 Status=400
+time="2024-02-15T14:46:23+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"8x8edHE5iGCHS7PG\"}}\n" RequestID=6f433fe1-a65e-4a06-b6c8-5a4deeae5931 Status=200
+time="2024-02-15T14:46:23+07:00" level=info msg="Outgoing response" Body= RequestID=6bde05da-6cfe-4372-be4d-57e6f1e07070 Status=200
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=f47f2270-0d7b-48a7-b772-d5fa2055bd41 Status=200
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=4a15831d-825a-408c-8ccd-d4061ab84dad Status=400
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=928ba9d0-2ad1-4dde-b374-63dc70f8c7d8 Status=400
+time="2024-02-15T14:46:24+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=fe4df690-0038-4259-bf44-e6edc61e7633
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=fe4df690-0038-4259-bf44-e6edc61e7633 Status=400
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=db0bc9b4-2fe8-4d84-9aa1-bc91b40a0c57 Status=401
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=77f9512a-d798-41f4-8ad3-ce3ec511694d Status=400
+time="2024-02-15T14:46:24+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=093eeb82-8d74-4c3c-b278-e5d6cf2431ec
+time="2024-02-15T14:46:24+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=093eeb82-8d74-4c3c-b278-e5d6cf2431ec Status=200
+time="2024-02-15T14:46:25+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=18d840bf-c369-42ff-8a45-79d103c91558
+time="2024-02-15T14:46:25+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=18d840bf-c369-42ff-8a45-79d103c91558 Status=400
+time="2024-02-15T14:46:25+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"\",\"role\":2}" RequestID=3902b5d7-ed11-4bdd-b46f-fcc77a3dc424
+time="2024-02-15T14:46:25+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Key: 'EditUserRequest.AddUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag\"}\n" RequestID=3902b5d7-ed11-4bdd-b46f-fcc77a3dc424 Status=400
+time="2024-02-15T14:47:25+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"i2vpWh9cJTwOmZ1W\"}}\n" RequestID=65a810f7-ebe5-4c93-84b4-4fe0a311c337 Status=200
+time="2024-02-15T14:47:25+07:00" level=info msg="Outgoing response" Body= RequestID=42ee665e-8360-45e3-b337-6e01a5fe5360 Status=200
+time="2024-02-15T14:47:25+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=5d922b5a-77b5-4fac-827d-b72e4bad1519 Status=200
+time="2024-02-15T14:47:25+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=0926e3b8-0a37-43c4-9afb-a3493aab7f23 Status=400
+time="2024-02-15T14:47:25+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=5e79ee21-e0c3-4e46-b06a-709626e34335 Status=400
+time="2024-02-15T14:47:25+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=0afc2e9c-abdd-4574-84d5-f803b7259304
+time="2024-02-15T14:47:25+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=0afc2e9c-abdd-4574-84d5-f803b7259304 Status=400
+time="2024-02-15T14:47:26+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=1a71e5a4-432a-466c-a1c9-2f0dc5d0e6c4 Status=401
+time="2024-02-15T14:47:26+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=2bfa2f26-f861-44e7-8e0f-d71df3a7f45a Status=400
+time="2024-02-15T14:47:26+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=672c43d2-2aa9-4c0d-9810-28b151a33933
+time="2024-02-15T14:47:26+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=672c43d2-2aa9-4c0d-9810-28b151a33933 Status=200
+time="2024-02-15T14:47:26+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=697268f7-e765-4b4a-af5b-e64723f24c36
+time="2024-02-15T14:47:26+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=697268f7-e765-4b4a-af5b-e64723f24c36 Status=400
+time="2024-02-15T14:47:26+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"\",\"role\":2}" RequestID=0dc1bce7-d6f9-4796-9846-725aa7b7f588
+time="2024-02-15T14:47:26+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Key: 'EditUserRequest.AddUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag\"}\n" RequestID=0dc1bce7-d6f9-4796-9846-725aa7b7f588 Status=400
+time="2024-02-15T15:17:46+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"V1zaGOrhDJpnnPsT\"}}\n" RequestID=d35684c6-64d8-4954-b488-ed875f264d16 Status=200
+time="2024-02-15T15:17:46+07:00" level=info msg="Outgoing response" Body= RequestID=a9bf08ca-5c36-4b11-b62d-24fdf4414917 Status=200
+time="2024-02-15T15:17:46+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=e3c43db3-b9da-4449-9be0-203f745ff74b Status=200
+time="2024-02-15T15:17:46+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=db80cabe-a93c-489f-83b5-879c73cf10e9 Status=400
+time="2024-02-15T15:17:47+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=ef3ebe60-1903-4844-ba57-452dc320a226 Status=400
+time="2024-02-15T15:17:47+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=d67abc5f-775e-44a4-8fc6-fe2cad2df775
+time="2024-02-15T15:17:47+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=d67abc5f-775e-44a4-8fc6-fe2cad2df775 Status=400
+time="2024-02-15T15:17:47+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=9ec3db36-8071-42aa-b574-97d4228e0c9f Status=401
+time="2024-02-15T15:17:47+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=e84b09cb-0af7-4cb0-bad5-936c115bb37b Status=400
+time="2024-02-15T15:17:47+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=f1b485d8-784e-4f0d-80ef-b639dd484e39
+time="2024-02-15T15:17:47+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=f1b485d8-784e-4f0d-80ef-b639dd484e39 Status=200
+time="2024-02-15T15:17:47+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"New Edit User\",\"role\":2}" RequestID=814e7d28-cf64-4069-bbbf-1548868d1ee5
+time="2024-02-15T15:17:47+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=814e7d28-cf64-4069-bbbf-1548868d1ee5 Status=400
+time="2024-02-15T15:17:48+07:00" level=info msg="Incoming request" Body="{\"user_id\":1,\"username\":\"New.Edit.User\",\"password\":\"rahasiaBanget\",\"fullName\":\"\",\"role\":2}" RequestID=0f0f360b-a9bb-4d50-b0c4-0d807a95698e
+time="2024-02-15T15:17:48+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Key: 'EditUserRequest.AddUserRequest.FullName' Error:Field validation for 'FullName' failed on the 'required' tag\"}\n" RequestID=0f0f360b-a9bb-4d50-b0c4-0d807a95698e Status=400
+time="2024-02-15T15:17:48+07:00" level=info msg="Outgoing response" Body="{\"code\":203,\"message\":\"Invalid Request Invalid userID\"}\n" RequestID=e56f7247-bd52-4d0d-ba40-7d11a22e0412 Status=400

@@ -1,0 +1,23 @@
+time="2024-05-10T07:02:34+07:00" level=info msg="Load configuration from config/config.yaml"
+time="2024-05-10T07:02:37+07:00" level=fatal msg="Error loading configuration: error connecting to database: dial tcp [::1]:3306: connectex: No connection could be made because the target machine actively refused it."
+time="2024-05-10T07:03:03+07:00" level=info msg="Load configuration from config/config.yaml"
+time="2024-05-10T07:03:03+07:00" level=info msg="Http server listen in port :8010"
+time="2024-05-10T07:03:03+07:00" level=info msg="gRPC server listening on :50051"
+time="2024-05-10T07:33:29+07:00" level=info msg="Load configuration from config/config.yaml"
+time="2024-05-10T07:33:29+07:00" level=info msg="Http server listen in port :8010"
+time="2024-05-10T07:33:29+07:00" level=info msg="gRPC server listening on :50051"
+time="2024-05-10T07:41:34+07:00" level=info msg="Load configuration from config/config.yaml"
+time="2024-05-10T07:41:34+07:00" level=info msg="Http server listen in port :8010"
+time="2024-05-10T07:41:34+07:00" level=info msg="gRPC server listening on :50051"
+time="2024-05-10T07:42:28+07:00" level=info msg="Incoming request" message="{\"token\":\"JYA60sj03G6ii0LR3BfF\"}" method=/model.User/GetUser proto=proto-buffer request_id=c41d3c77-e57a-48d2-8e50-a7bda1adae22
+time="2024-05-10T07:42:28+07:00" level=info msg="Outgoing response" duration=9.0181ms message="{\"code\":101, \"message\":\"User not found\"}" method=/model.User/GetUser request_id=c41d3c77-e57a-48d2-8e50-a7bda1adae22
+time="2024-05-10T07:54:49+07:00" level=info msg="Incoming request" message="{\"token\":\"3GYERf733VxsxIbo\"}" method=/model.User/GetUser proto=proto-buffer request_id=ec169284-5733-45bb-8d64-5462ca157ea2
+time="2024-05-10T07:54:49+07:00" level=info msg="Outgoing response" duration=2.1256ms message="{\"code\":101, \"message\":\"User not found\"}" method=/model.User/GetUser request_id=ec169284-5733-45bb-8d64-5462ca157ea2
+time="2024-05-10T07:57:40+07:00" level=info msg="Incoming request" message="{\"token\":\"Kp6Sa5kwHGEwk6Dl\"}" method=/model.User/GetUser proto=proto-buffer request_id=96a0dc8c-5361-49ca-a004-37a198745afc
+time="2024-05-10T07:57:40+07:00" level=info msg="Outgoing response" duration="521.4µs" message="{\"code\":101, \"message\":\"User not found\"}" method=/model.User/GetUser request_id=96a0dc8c-5361-49ca-a004-37a198745afc
+time="2024-05-10T08:04:40+07:00" level=info msg="Incoming request" message="{\"token\":\"hfSL3Z02UbzAJlmN\"}" method=/model.User/GetUser proto=proto-buffer request_id=fb3d88f9-eb95-4d45-b208-c1d6940df0dd
+time="2024-05-10T08:04:40+07:00" level=info msg="Outgoing response" duration=1.5605ms message="{\"code\":101, \"message\":\"User not found\"}" method=/model.User/GetUser request_id=fb3d88f9-eb95-4d45-b208-c1d6940df0dd
+time="2024-05-10T08:07:14+07:00" level=info msg="Incoming request" message="{\"token\":\"CqgBFj4vJIa4qf3G\"}" method=/model.User/GetUser proto=proto-buffer request_id=8c4ed606-593e-499f-a064-0ce643eba84f
+time="2024-05-10T08:07:14+07:00" level=info msg="Outgoing response" duration="726.1µs" message="{\"code\":101, \"message\":\"User not found\"}" method=/model.User/GetUser request_id=8c4ed606-593e-499f-a064-0ce643eba84f
+time="2024-05-10T08:18:08+07:00" level=info msg="Incoming request" message="{\"token\":\"dN4SWue994Kre7Fp\"}" method=/model.User/GetUser proto=proto-buffer request_id=5e8f11fe-e2e7-4a28-b7ab-6f7b8d0eb17e
+time="2024-05-10T08:18:08+07:00" level=info msg="Outgoing response" duration=1.0469ms message="{\"code\":101, \"message\":\"User not found\"}" method=/model.User/GetUser request_id=5e8f11fe-e2e7-4a28-b7ab-6f7b8d0eb17e

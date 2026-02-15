@@ -1,0 +1,150 @@
+time="2024-02-12T14:08:57+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"ZRLAEhB6KuWFUbE6\"}}\n" RequestID=ee77fcfa-949a-43d2-86c1-fd5f378ce806 Status=200
+time="2024-02-12T14:08:58+07:00" level=info msg="Outgoing response" Body= RequestID=db3001ca-8809-42be-ad02-c8b00ea329e3 Status=200
+time="2024-02-12T15:00:51+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"GPKghNK9mGvHHT6j\"}}\n" RequestID=70c8995f-a747-415d-b787-11b81325a305 Status=200
+time="2024-02-12T15:00:51+07:00" level=info msg="Outgoing response" Body= RequestID=ce07d8f0-b669-47fc-8f57-3bee5e749c08 Status=200
+time="2024-02-12T15:00:51+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=12a74b4b-b33a-4b0e-ac55-f4e121617d87 Status=503
+time="2024-02-12T15:03:18+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"zHIVoWtew45VTmEc\"}}\n" RequestID=16ab748d-9afe-405c-83d9-0672fca781e8 Status=200
+time="2024-02-12T15:03:18+07:00" level=info msg="Outgoing response" Body= RequestID=9864b0fc-82f8-4175-bb13-e851a467e7c2 Status=200
+time="2024-02-12T15:03:18+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=c9003fb5-3e2e-494c-8797-6853b889ca44 Status=503
+time="2024-02-12T15:04:43+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"OB6YQcbNEbcPum6V\"}}\n" RequestID=277d92a8-5c8f-46fe-a428-3c817413cf5a Status=200
+time="2024-02-12T15:04:43+07:00" level=info msg="Outgoing response" Body= RequestID=de4aca2c-0e1a-4150-95aa-588607be3f48 Status=200
+time="2024-02-12T15:04:43+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=3ef9ef13-1c26-4c4e-ab12-db92f378057c Status=503
+time="2024-02-12T15:05:32+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"HANYUoPWLXWsWgEt\"}}\n" RequestID=4cad1ce4-1850-4855-9670-9b676c81910e Status=200
+time="2024-02-12T15:05:32+07:00" level=info msg="Outgoing response" Body= RequestID=da1b5a7a-5c70-4aab-a00a-745ab68f6c45 Status=200
+time="2024-02-12T15:05:32+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=f02eac5f-c7fe-49ca-a212-3ec93efd463b Status=503
+time="2024-02-12T15:06:23+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"3GJnhwCig6xWGSI8\"}}\n" RequestID=63954d11-643d-488e-b2b6-d89c41d0151a Status=200
+time="2024-02-12T15:06:23+07:00" level=info msg="Outgoing response" Body= RequestID=695b43e5-0c45-4c46-81d1-92ba085f6bf5 Status=200
+time="2024-02-12T15:06:23+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=a39c12a2-e689-4ac8-bf8c-86a30198af95 Status=503
+time="2024-02-12T15:07:29+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"d8tXNjsnPLoHU3IU\"}}\n" RequestID=8bd8126e-03e0-451c-9065-0fc1bebee61c Status=200
+time="2024-02-12T15:07:29+07:00" level=info msg="Outgoing response" Body= RequestID=864c9dc5-8da5-4d63-b66f-165febdb11bb Status=200
+time="2024-02-12T15:07:29+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=8f33b372-9cfa-442b-a151-177b745c7398 Status=503
+time="2024-02-12T15:09:15+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"kAGATRbs350eBow6\"}}\n" RequestID=a16c4362-ee1d-4b03-b6c0-7cf83fa94223 Status=200
+time="2024-02-12T15:09:15+07:00" level=info msg="Outgoing response" Body= RequestID=16fce53f-29d7-46c3-8cf3-060dbbff2721 Status=200
+time="2024-02-12T15:09:15+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=0d7ecc4f-7470-4f6d-a2c8-f099f56fa0c9 Status=503
+time="2024-02-12T15:10:55+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"QkiBdcVknq7orWFe\"}}\n" RequestID=8ed842fa-f389-46b0-8583-eaa3a68ee9b9 Status=200
+time="2024-02-12T15:10:55+07:00" level=info msg="Outgoing response" Body= RequestID=cceb68ad-5759-417c-82ee-b8e9e66cfab3 Status=200
+time="2024-02-12T15:10:55+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=e86660d4-dceb-441e-90a1-80d898a322d0 Status=503
+time="2024-02-12T15:11:17+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"QjxYyD8pgwngRumK\"}}\n" RequestID=de54eb74-37de-49cc-b814-f4e24f9c4ece Status=200
+time="2024-02-12T15:11:17+07:00" level=info msg="Outgoing response" Body= RequestID=563a0927-28cf-4c92-a10b-b69a69efee0b Status=200
+time="2024-02-12T15:11:46+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"V100VGwCdF06arla\"}}\n" RequestID=4fa19526-cd22-4555-9b78-9eda4478aee9 Status=200
+time="2024-02-12T15:11:46+07:00" level=info msg="Outgoing response" Body= RequestID=62ecb26a-b24f-44a5-aaa7-0876829d030e Status=200
+time="2024-02-12T15:11:46+07:00" level=info msg="Outgoing response" Body="{\"code\":301,\"message\":\"Error query database\"}\n" RequestID=0b664826-8867-4ce8-8869-0488f0438a68 Status=503
+time="2024-02-12T15:12:34+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"QZOICbqlMpPFwIMQ\"}}\n" RequestID=9275f78c-c92c-4bc0-8515-a98913d48c48 Status=200
+time="2024-02-12T15:12:34+07:00" level=info msg="Outgoing response" Body= RequestID=f5410eeb-278d-4e0a-acdd-2edb225ac9bd Status=200
+time="2024-02-12T15:12:34+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=7a1d5a26-463c-438e-ab18-7332dd18693b Status=200
+time="2024-02-12T16:12:19+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"cN7V9fHKxqYvSjyX\"}}\n" RequestID=787739f2-49e7-41c2-b3a2-7813f15ea228 Status=200
+time="2024-02-12T16:12:19+07:00" level=info msg="Outgoing response" Body= RequestID=5eab1378-0553-41d9-8b38-372cc9d97c9a Status=200
+time="2024-02-12T16:12:19+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=ec69893e-8d82-420e-8adb-54256da97c8d Status=200
+time="2024-02-12T16:12:19+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=42dc9554-6c5c-4e1a-bab3-35ac30d54c41 Status=400
+time="2024-02-12T16:12:54+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"5FJ88g027E8LY4qQ\"}}\n" RequestID=7b11b389-8709-40fd-ac12-d3aa7af973ca Status=200
+time="2024-02-12T16:12:54+07:00" level=info msg="Outgoing response" Body= RequestID=63cec323-4a0e-47ce-89b9-52515f302421 Status=200
+time="2024-02-12T16:12:54+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=c26fcf54-1221-4b64-bc93-84e66f89fb7b Status=200
+time="2024-02-12T16:12:55+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=b9fc737a-8cf9-4796-8d8b-61c165b9668a Status=400
+time="2024-02-12T16:13:50+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"1LTlLxzJLSqEIBv6\"}}\n" RequestID=3b4313be-98c3-4457-af0d-090436242db7 Status=200
+time="2024-02-12T16:13:50+07:00" level=info msg="Outgoing response" Body= RequestID=1a467dd8-605c-4ec8-bab2-e45fcf94ad52 Status=200
+time="2024-02-12T16:13:51+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=de21b9df-5eed-40c7-a211-4ee304988f6d Status=200
+time="2024-02-12T16:13:51+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=0533532f-3e7d-4ff6-a200-35274a902c83 Status=400
+time="2024-02-12T16:13:51+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=57bb1761-e3d7-4800-9d38-2145c2382202 Status=200
+time="2024-02-12T16:18:36+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"sK1nruUF2tBmX9eV\"}}\n" RequestID=37598b55-196f-449c-b400-77dc9a623db4 Status=200
+time="2024-02-12T16:18:36+07:00" level=info msg="Outgoing response" Body= RequestID=0989f7a4-d89a-4c3a-a4a5-17c7f67d57d9 Status=200
+time="2024-02-12T16:18:36+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=5fc379a5-4627-46da-a8aa-ea4032fd5c00 Status=200
+time="2024-02-12T16:18:36+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=c33b85fa-6440-49c8-82d8-567feca48ce3 Status=400
+time="2024-02-12T16:18:36+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=cf9d81d4-1721-4bfd-aabf-f1c366aa87b8 Status=200
+time="2024-02-12T16:19:57+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"Mx4F2fkMudlo12hP\"}}\n" RequestID=8d3f6aff-845e-44b1-a700-303c4219dc32 Status=200
+time="2024-02-12T16:19:57+07:00" level=info msg="Outgoing response" Body= RequestID=f51deb0f-064b-4b81-84e8-6efde2cec49c Status=200
+time="2024-02-12T16:19:58+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=6d8c6d6d-a8a2-443e-834a-e8942957f59e Status=200
+time="2024-02-12T16:19:58+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=8b99f4e0-c1e8-4116-9e28-dbb10f49f2e8 Status=400
+time="2024-02-12T16:19:58+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=09352427-9c94-4310-a27f-300abe1b2a18 Status=400
+time="2024-02-12T16:23:25+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"z9hV8sRL1FwPhJMh\"}}\n" RequestID=436fa0f1-97d0-40e6-909d-20481542d617 Status=200
+time="2024-02-12T16:23:25+07:00" level=info msg="Outgoing response" Body= RequestID=fc5fb8ad-e00e-4dab-bbbf-10526f809845 Status=200
+time="2024-02-12T16:23:26+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=83669428-aff9-4762-9a99-36d5beb5fdbc Status=200
+time="2024-02-12T16:23:26+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=244eb54f-4cd0-4f86-8ad2-c01f772b0a27 Status=400
+time="2024-02-12T16:23:26+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=9057bd64-46f5-4d6f-80c7-d7f58c1d4c97 Status=400
+time="2024-02-12T16:23:26+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=11aaa0da-0e1d-41b7-83dd-eaf33656e14f Status=400
+time="2024-02-12T16:23:53+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"6RPvUkzqB6WzMoU7\"}}\n" RequestID=4db9a741-d1ab-4866-83ed-e4793feb142b Status=200
+time="2024-02-12T16:23:53+07:00" level=info msg="Outgoing response" Body= RequestID=b301ce9f-5f3e-4f65-bc4b-5fc8aebf56e0 Status=200
+time="2024-02-12T16:23:53+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=d8a2e026-ade9-48c7-bf62-66f95a7c282d Status=200
+time="2024-02-12T16:23:53+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=f3327591-5d0d-410a-8fa4-af48a1ba8213 Status=400
+time="2024-02-12T16:23:54+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=51c35a5c-35df-41ae-9e32-58325be53b28 Status=400
+time="2024-02-12T16:23:54+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=2c96d310-d062-4444-b7c9-e37ff56037ed Status=400
+time="2024-02-12T16:24:40+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"kRYx2sMBNfek87MA\"}}\n" RequestID=39ce8f56-301e-440f-920d-61cc2b1a9793 Status=200
+time="2024-02-12T16:24:40+07:00" level=info msg="Outgoing response" Body= RequestID=831bf580-5c32-4ddb-9afc-a3b50303b9a3 Status=200
+time="2024-02-12T16:24:40+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=dc946384-0b4b-4bf6-b6f2-e1ef565a05c3 Status=200
+time="2024-02-12T16:24:40+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=dfa224b4-e302-46fa-b714-7b076dac4ddb Status=400
+time="2024-02-12T16:24:40+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=c6303b30-bc99-46bf-97db-67349f6b2c33 Status=400
+time="2024-02-12T16:24:41+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=69e02581-c25a-4a46-b25c-406d7e1a2a49
+time="2024-02-12T16:24:41+07:00" level=info msg="Outgoing response" Body="{\"code\":302,\"message\":\"Error Update database\"}\n" RequestID=69e02581-c25a-4a46-b25c-406d7e1a2a49 Status=503
+time="2024-02-12T16:31:45+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"HyxMTMyolqsPo4QR\"}}\n" RequestID=4bfd2c7f-dfd3-40eb-8314-3745ef37a9c6 Status=200
+time="2024-02-12T16:31:45+07:00" level=info msg="Outgoing response" Body= RequestID=c88ba8e0-fab1-4f38-b960-d5b9f46fe8f3 Status=200
+time="2024-02-12T16:31:45+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=ed56949e-e88f-4bd3-a2e5-b32f31f6e040 Status=200
+time="2024-02-12T16:31:45+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=95fd3e70-56bb-4627-a530-3e72ff1c4fbe Status=400
+time="2024-02-12T16:31:45+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=d684e8a9-6dce-4dec-8f44-f54d4d2552c8 Status=400
+time="2024-02-12T16:31:45+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=95a05838-6bce-4b7d-86ee-3473d14f3243
+time="2024-02-12T16:31:45+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=95a05838-6bce-4b7d-86ee-3473d14f3243 Status=400
+time="2024-02-12T16:40:06+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"zAF12cElki0Jixjm\"}}\n" RequestID=9fae5471-8778-4504-8234-616c26c6438b Status=200
+time="2024-02-12T16:40:06+07:00" level=info msg="Outgoing response" Body= RequestID=2982aff4-13f2-4ece-bf5a-3886c236f0b0 Status=200
+time="2024-02-12T16:40:07+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=af6b1023-3072-4355-82e1-b96aebd161a0 Status=200
+time="2024-02-12T16:40:07+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=25cc5b23-e07d-4693-9129-6bb239f96d37 Status=400
+time="2024-02-12T16:40:07+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=73dd4692-1ea0-48cc-bccf-f1a64291f854 Status=400
+time="2024-02-12T16:40:07+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=7be34180-b2b9-4a2f-980a-84b19bd94afb
+time="2024-02-12T16:40:07+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=7be34180-b2b9-4a2f-980a-84b19bd94afb Status=400
+time="2024-02-12T16:40:07+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=955611d4-56fb-468f-8d28-5dd3bf126a55 Status=200
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"ZEAoHer9HcvwTMOC\"}}\n" RequestID=61f01856-2767-499a-bd6b-e78fb2d11b00 Status=200
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body= RequestID=eb766f44-e0aa-4845-a7f4-3ddd59d5b6b8 Status=200
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=481b91b8-828c-44df-aa48-5dcb6d783df7 Status=200
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=2e0f83ed-145f-4061-8cb8-9eaead25016d Status=400
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=7ae41bcc-5dc9-431c-91dd-f4643ff74219 Status=400
+time="2024-02-12T16:42:01+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=52e03fad-d6a5-4e3e-bc09-be48fe0525b2
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=52e03fad-d6a5-4e3e-bc09-be48fe0525b2 Status=400
+time="2024-02-12T16:42:01+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=e3c5c371-3c0c-431a-b2e3-eee3d8fb8589 Status=200
+time="2024-02-12T16:42:39+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"9J8vYpeyLLtT0MDZ\"}}\n" RequestID=a65e83a9-15cc-4770-8453-7f1cd805cf75 Status=200
+time="2024-02-12T16:42:39+07:00" level=info msg="Outgoing response" Body= RequestID=d4611bfb-458f-4e53-ac15-51ea5de42471 Status=200
+time="2024-02-12T16:42:39+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=e09abdbe-ddda-4ca9-a880-ef26a14d4330 Status=200
+time="2024-02-12T16:42:39+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=e40a236e-1375-4e99-83b6-b47a060f2419 Status=400
+time="2024-02-12T16:42:39+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=743ed0f9-471c-45f8-9798-de528e8ae85d Status=400
+time="2024-02-12T16:42:39+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=64b622c3-accd-4a5e-9fae-29f125f2778d
+time="2024-02-12T16:42:39+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=64b622c3-accd-4a5e-9fae-29f125f2778d Status=400
+time="2024-02-12T16:42:40+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=06256ac0-8f96-4a07-b852-5224dbd882e0 Status=200
+time="2024-02-12T17:01:46+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"1OXB9bX3AdMC8Glp\"}}\n" RequestID=9e237a96-f1d4-44fe-be17-54bc44e9ee40 Status=200
+time="2024-02-12T17:01:46+07:00" level=info msg="Outgoing response" Body= RequestID=6438a0bc-b9a8-4fa7-89b0-5334d4527124 Status=200
+time="2024-02-12T17:01:47+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=f88671af-e324-4a5b-ac32-45882d275f68 Status=200
+time="2024-02-12T17:01:47+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=0e9cf0dd-4519-4d08-b049-faccd0d1adaf Status=400
+time="2024-02-12T17:01:47+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=355c1a18-8a15-491c-95e2-4d0215ee5476 Status=400
+time="2024-02-12T17:01:47+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=00dec4ad-af70-4c49-a3d8-ab8789552ca8
+time="2024-02-12T17:01:47+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=00dec4ad-af70-4c49-a3d8-ab8789552ca8 Status=400
+time="2024-02-12T17:01:47+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=e41e7b3d-64c5-4cb3-b7e3-cfca06d41a17 Status=400
+time="2024-02-12T17:02:04+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"ydk5w1rwPzX9svie\"}}\n" RequestID=87d7c07d-900f-4c0f-baf3-8da84bf6687e Status=200
+time="2024-02-12T17:02:04+07:00" level=info msg="Outgoing response" Body= RequestID=05517501-0086-4140-ae2f-bc82bf375ee4 Status=200
+time="2024-02-12T17:02:05+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=7021c4d2-ef31-4a4f-ba1d-1d1e73df8a36 Status=200
+time="2024-02-12T17:02:05+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=942a750d-0951-4b01-8c4e-3638b50dd041 Status=400
+time="2024-02-12T17:02:05+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=366e0d97-52d4-43c0-bdd0-ae70921d362e Status=400
+time="2024-02-12T17:02:05+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=f1dee81a-20e6-4c8e-8640-f90ed616977b
+time="2024-02-12T17:02:05+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=f1dee81a-20e6-4c8e-8640-f90ed616977b Status=400
+time="2024-02-12T17:02:05+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=ac4526ba-7704-40a2-9e9a-b0fe9f901651 Status=401
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"HO5ycgZq5pKGyjcZ\"}}\n" RequestID=8d9d72d4-d300-4871-aec7-f48c3fd337a4 Status=200
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body= RequestID=0db1655b-5f1c-4324-8e11-9dbb2a2f9614 Status=200
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=eae3ebe1-1685-4720-8c3c-ab5d527b1182 Status=200
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=710c5a8c-8e10-404e-a428-3f85f066062b Status=400
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=c15b7035-4300-44c0-986a-e532d392a75d Status=400
+time="2024-02-12T17:03:57+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=3ad8d737-3e6a-4246-844d-9b2fee3f99d4
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=3ad8d737-3e6a-4246-844d-9b2fee3f99d4 Status=400
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=409c7341-96bc-43bd-8720-0b71bdf4a123 Status=401
+time="2024-02-12T17:03:57+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=95870d01-7acc-4c54-abf9-f87a76d42b23 Status=400
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"HRSJPo8XmRmeCKCq\"}}\n" RequestID=e4d218ae-8cfd-47e6-911a-05e174729761 Status=200
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body= RequestID=41023911-f760-4ffb-96c6-4e86e858a003 Status=200
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=4b678618-0119-496d-9215-9b02e903b6b1 Status=200
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=79fb586f-6c88-4581-961e-ba78381aedd3 Status=400
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=f70d1430-f604-436c-9b89-3775a1b21489 Status=400
+time="2024-02-12T17:06:19+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=27066042-04b9-4f92-b30e-8048604b54a8
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=27066042-04b9-4f92-b30e-8048604b54a8 Status=400
+time="2024-02-12T17:06:19+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=ade6488b-f83b-43e7-9746-ca51ee3001f1 Status=401
+time="2024-02-12T17:06:20+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=aa9945e0-e462-4f50-8182-ca7a83c0bec3 Status=400
+time="2024-02-12T17:09:34+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\",\"data\":{\"token\":\"mGalkKWny95NPVgA\"}}\n" RequestID=d7f033c8-d1f0-4cd8-8dc8-9511bc41b712 Status=200
+time="2024-02-12T17:09:34+07:00" level=info msg="Outgoing response" Body= RequestID=93b17fc2-8547-4791-9ffa-232e5b453948 Status=200
+time="2024-02-12T17:09:34+07:00" level=info msg="Outgoing response" Body="{\"code\":0,\"message\":\"Success\"}\n" RequestID=5820dd6c-2543-48d9-ac57-23161b47950e Status=200
+time="2024-02-12T17:09:35+07:00" level=info msg="Outgoing response" Body="{\"code\":211,\"message\":\"User Not Active\"}\n" RequestID=688d803b-7afe-4182-9160-ea7fcebd4349 Status=400
+time="2024-02-12T17:09:35+07:00" level=info msg="Outgoing response" Body="{\"code\":212,\"message\":\"User Not Active\"}\n" RequestID=335f3c5b-51b3-45e8-a0b5-b65243b4aea8 Status=400
+time="2024-02-12T17:09:35+07:00" level=error msg="Error CreateUser  Error 1062 (23000): Duplicate entry 'sample-1' for key 'username_client_id'" request_id=36628c6f-7f57-4d57-8902-a795086ba7ac
+time="2024-02-12T17:09:35+07:00" level=info msg="Outgoing response" Body="{\"code\":213,\"message\":\"Duplicate User\"}\n" RequestID=36628c6f-7f57-4d57-8902-a795086ba7ac Status=400
+time="2024-02-12T17:09:35+07:00" level=info msg="Outgoing response" Body="{\"code\":101,\"message\":\"User not found\"}\n" RequestID=8a0395ce-cd52-4baf-961b-b91da8a7c7e6 Status=401
+time="2024-02-12T17:09:35+07:00" level=info msg="Outgoing response" Body="{\"code\":202,\"message\":\"Invalid Token\"}\n" RequestID=276703c5-c237-4d82-924c-1278f26901f6 Status=400

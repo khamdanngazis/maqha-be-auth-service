@@ -1,0 +1,313 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Auth service",
+        "description": "login user management",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8010"
+        }
+    ],
+    "paths": {
+        "/login":{
+            "post": {
+                "description": "Login User",
+                "requestBody": {
+                    "description": "Login User",
+                    "content": {
+                        "application/json" : {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username" : {
+                                        "type": "string"
+                                    },
+                                    "password" : {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success login",
+                        "content": {
+                            "application/json" : {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code" : {
+                                            "type": "number",
+                                            "example":0
+                                        },
+                                        "message" : {
+                                            "type": "string",
+                                            "example" : "Success"
+                                        },
+                                        "data" : {
+                                            "type": "object",
+                                            "properties": {
+                                                "token" : {
+                                                    "type": "string",
+                                                    "example":"token_xxx"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/logout":{
+            "delete": {
+                "description": "logout User",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "description": "token login"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success logout",
+                        "content": {
+                            "application/json" : {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code" : {
+                                            "type": "number",
+                                            "example":0
+                                        },
+                                        "message" : {
+                                            "type": "string",
+                                            "example" : "Success"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user":{
+            "get" :{
+                "description": "get all User",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "description": "token login"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success get user",
+                        "content": {
+                            "application/json" : {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code" : {
+                                            "type": "number",
+                                            "example":0
+                                        },
+                                        "message" : {
+                                            "type": "string",
+                                            "example" : "Success"
+                                        },
+                                        "data" : {
+                                            "type": "array",
+                                            "items" :{
+                                                "properties": {
+                                                    "id" :{
+                                                        "type": "integer"
+                                                    },
+                                                    "username" : {
+                                                        "type": "string"
+                                                    },
+                                                    "fullName" : {
+                                                        "type": "string"
+                                                    },
+                                                    "role":{
+                                                        "type": "integer",
+                                                        "enum": [1,2]
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "add User",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "description": "token login"
+                    }
+                ],
+                "requestBody": {
+                    "description": "add User",
+                    "content": {
+                        "application/json" : {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username" : {
+                                        "type": "string"
+                                    },
+                                    "password" : {
+                                        "type": "string"
+                                    },
+                                    "fullName" : {
+                                        "type": "string"
+                                    },
+                                    "role":{
+                                        "type": "integer",
+                                        "enum": [1,2]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success add user",
+                        "content": {
+                            "application/json" : {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code" : {
+                                            "type": "number",
+                                            "example":0
+                                        },
+                                        "message" : {
+                                            "type": "string",
+                                            "example" : "Success"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "update User",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "description": "token login"
+                    }
+                ],
+                "requestBody": {
+                    "description": "update User",
+                    "content": {
+                        "application/json" : {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username" : {
+                                        "type": "string"
+                                    },
+                                    "password" : {
+                                        "type": "string"
+                                    },
+                                    "fullName" : {
+                                        "type": "string"
+                                    },
+                                    "role":{
+                                        "type": "integer",
+                                        "enum": [1,2]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success add user",
+                        "content": {
+                            "application/json" : {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code" : {
+                                            "type": "number",
+                                            "example":0
+                                        },
+                                        "message" : {
+                                            "type": "string",
+                                            "example" : "Success"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/{userId}":{
+            
+            "delete": {
+                "description": "Deactivate User",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "path",
+                        "description": "userId"
+                    },
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "description": "token login"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success Deactivate user",
+                        "content": {
+                            "application/json" : {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code" : {
+                                            "type": "number",
+                                            "example":0
+                                        },
+                                        "message" : {
+                                            "type": "string",
+                                            "example" : "Success"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
