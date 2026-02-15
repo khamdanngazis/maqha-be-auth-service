@@ -33,6 +33,11 @@ func (*muxRouter) PUT(uri string, f func(w http.ResponseWriter, r *http.Request)
 func (*muxRouter) DELETE(uri string, f func(w http.ResponseWriter, r *http.Request)) {
 	muxDispatcher.HandleFunc(uri, f).Methods("DELETE")
 }
+
+func (*muxRouter) GetRouter() *mux.Router {
+	return muxDispatcher
+}
+
 func (*muxRouter) SERVE(port string) {
 	logging.Log.Infof("Http server listen in port %s", port)
 	//muxDispatcher.Use(apmgorilla.Middleware())

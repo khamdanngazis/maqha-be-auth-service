@@ -24,7 +24,7 @@ COPY cmd/config /app/cmd/config
 
 RUN mkdir -p /app/logs
 
-EXPOSE 8011 50053
+EXPOSE 8011
 
 ENTRYPOINT ["/app/auth_service"]
 CMD ["-config", "cmd/config/config.yaml", "-log.file", "logs"]

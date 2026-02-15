@@ -1,6 +1,9 @@
 package router
 
-import "net/http"
+import (
+	"github.com/gorilla/mux"
+	"net/http"
+)
 
 type Router interface {
 	GET(uri string, f func(w http.ResponseWriter, r *http.Request))
@@ -8,4 +11,5 @@ type Router interface {
 	PUT(uri string, f func(w http.ResponseWriter, r *http.Request))
 	DELETE(uri string, f func(w http.ResponseWriter, r *http.Request))
 	SERVE(port string)
+	GetRouter() *mux.Router
 }

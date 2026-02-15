@@ -15,6 +15,7 @@ import (
 	"maqhaa/library/logging"
 	"maqhaa/library/middleware"
 	"net"
+	"net/http"
 	"os"
 	"strings"
 	"time"
@@ -22,6 +23,7 @@ import (
 	grpcHandler "maqhaa/auth_service/internal/interface/grpc/handler"
 	pb "maqhaa/auth_service/internal/interface/grpc/model"
 
+	"github.com/soheilhy/cmux"
 	"google.golang.org/grpc"
 )
 
@@ -73,10 +75,6 @@ func main() {
 	httpRouter.DELETE("/user/{userID}", authHandler.DeactivateUserHandler)
 	httpRouter.DELETE("/logout", authHandler.LogoutHandler)
 
-	go func() {
-		httpRouter.SERVE(cfg.AppPort)
-	}()
-
 	userHandlerGrpc := grpcHandler.NewUserGRPCHandler(authService)
 	// Initialize gRPC server
 	grpcServer := grpc.NewServer(grpc.UnaryInterceptor(middleware.LoggingInterceptor))
@@ -84,17 +82,43 @@ func main() {
 	// Register gRPC service implementation
 	pb.RegisterUserServer(grpcServer, userHandlerGrpc)
 
-	// Start gRPC server
-	listen, err := net.Listen("tcp", cfg.GrpcPort)
+	// Create a TCP listener on the app port for both HTTP and gRPC
+	listener, err := net.Listen("tcp", cfg.AppPort)
 	if err != nil {
-		logging.Log.Fatalf("Error starting gRPC server: %s", err)
+		logging.Log.Fatalf("Error creating listener: %v", err)
 	}
+	defer listener.Close()
 
-	defer listen.Close()
+	// Create a connection multiplexer
+	mux := cmux.New(listener)
 
-	logging.Log.Infof("gRPC server listening on %s", cfg.GrpcPort)
-	if err := grpcServer.Serve(listen); err != nil {
-		logging.Log.Fatalf("Error serving gRPC: %v", err)
+	// Match connections based on protocol
+	grpcListener := mux.MatchWithWriters(cmux.HTTP2MatchHeaderFieldSendSettings("content-type", "application/grpc"))
+	httpListener := mux.Match(cmux.HTTP1Fast())
+
+	// Start gRPC server on gRPC listener
+	go func() {
+		logging.Log.Infof("gRPC server listening on %s", cfg.AppPort)
+		if err := grpcServer.Serve(grpcListener); err != nil {
+			logging.Log.Errorf("gRPC server error: %v", err)
+		}
+	}()
+
+	// Start HTTP server on HTTP listener
+	go func() {
+		httpServer := &http.Server{
+			Handler: httpRouter.GetRouter(),
+		}
+		logging.Log.Infof("HTTP server listening on %s", cfg.AppPort)
+		if err := httpServer.Serve(httpListener); err != nil && err != http.ErrServerClosed {
+			logging.Log.Errorf("HTTP server error: %v", err)
+		}
+	}()
+
+	// Start the multiplexer
+	logging.Log.Infof("Starting dual-protocol server (HTTP + gRPC) on %s", cfg.AppPort)
+	if err := mux.Serve(); err != nil {
+		logging.Log.Fatalf("Server error: %v", err)
 	}
 }
 
