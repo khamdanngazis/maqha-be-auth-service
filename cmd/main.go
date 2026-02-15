@@ -16,6 +16,7 @@ import (
 	"maqhaa/library/middleware"
 	"net"
 	"os"
+	"strings"
 	"time"
 
 	grpcHandler "maqhaa/auth_service/internal/interface/grpc/handler"
@@ -99,6 +100,12 @@ func main() {
 
 func initLogging(logFolder string) {
 	logging.InitLogger()
+
+	if strings.EqualFold(os.Getenv("AUTH_LOG_TO_STDOUT"), "true") {
+		logging.Log.SetOutput(os.Stdout)
+		return
+	}
+
 	currentDate := time.Now().Format("2006-01-02")
 
 	// Specify the log file with the current date

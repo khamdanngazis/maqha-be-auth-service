@@ -89,6 +89,7 @@ Jika tidak memakai file config, bisa pakai env dengan prefix `AUTH_`:
 - `AUTH_DATABASE_DEBUG`
 - `AUTH_APPPORT`
 - `AUTH_GRPCPORT`
+- `AUTH_LOG_TO_STDOUT` (set `true` untuk log ke stdout)
 
 ## Kode Error
 - 0: Success
